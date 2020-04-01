@@ -65,3 +65,19 @@ Let us know if you have any questions about that syntax!
 ### Tips And Hints:
 
 * You can use the `id` field of each object, which, in `printTodo`, also gets put on the DOM as the `li`'s `id`. Now you can find the right todo to edit no matter what order your todos are in. You may not end up using it, but remember that it's there!
+
+
+# Step By Step (Oh Baby)
+
+This is a more fine-grained step-by-step guide to making Todata happen, for those who don't want to figure it out all on their lonesome.
+
+
+### Part One: Adding Todos
+
+Create a new `add-todos-button-controller.js` file and let's get cracking!
+
+* Query the button for adding todos and add an event listener function. This can be done in one line using 1) dot-chaining and 2) an anonymouse function as the second parameter to `addEventListener`.
+* Inside that event listener function, query the todo user input box and save it to a variable. We'll need to use it a few times!
+* Now We're ready to create our todo object. It needs four fields: the `text`, `completeness`, `id`, and `priority`. You can grab the `priority` and `text`'s values from the DOM. Where would they be located? I'll leave you to think about the values for `complete` (easy to figure out) and `id` (a bit harder).
+* Now push that object into `todos`. And maybe currentTodos? We'll have to figure out when or even whether to use this copy-of-todos (find it in `todos.js`).
+* Finally, let's update the DOM. Call `refreshTodos`--it takes no parameters and simply erases the list and rewrites it to bring it in line with whatever's in `todos`. (Or maybe it should be `currentTodos`? Hey, I'm just the idea man. That's YOUR job.)
