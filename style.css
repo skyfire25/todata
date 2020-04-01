@@ -1,3 +1,55 @@
 .complete {
   text-decoration: line-through;
 }
+
+.app{
+height: 100%;
+width: 100%;
+color: aqua;
+background-color: grey;
+}
+
+.todo-input{
+height: 10px;
+width: 15em;
+color: blue;
+font-size: large;
+font-style: bold;
+}
+
+.priority{
+  color: blueviolet;
+  font-size: medium;
+  font-style: oblique;
+}
+
+.add-todo{
+color: tomato;
+font-size: medium;
+font-style: normal;
+}
+
+.toggle-priorities{
+color: cornflowerblue;
+block
+}
+
+.hide-complete{
+color: purple;
+}
+
+.hide-low-priority{
+color:magenta;
+}
+
+.high-priority-first{
+color: darkorange
+}
+
+.complete-last{
+color: darkred
+}
+
+.todo-list{
+color: chartreuse
+}

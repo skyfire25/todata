@@ -1,9 +1,6 @@
-
-
 /********************
  * HELPER FUNCTIONS *
  ********************/
-
 const getTodoName = function(todo) {
   return todo.text
 }
@@ -32,12 +29,42 @@ const isLowPriority = function(todo) {
   return todo.priority === 1
 }
 
+const notCompleted=function (firstTodo, secondTodo){
+  if(isNotComplete(firstTodo)){
+    return -1;
+  }else if(firstTodo.complete == secondTodo.complete){
+    return 0
+  }else{
+    return 1
+  }
+}
+
+const notCompleteFirst = function(todo){
+  const newArray = todo.slice()
+  return newArray.sort(notCompleted)
+}
+
+const firTwo= function (todo, todo1){
+
+   if (isHighPriority(todo)){
+    return -1
+  }else if (isHighPriority === todo1){
+    return 1
+  }else{
+    return 0
+  }
+}
+
+
+  const priority2First = function (todo){
+    const todoList = todo.slice()
+    return todoList.sort(firTwo)
+  }
 
 
 /***********************
  * ITERATION FUNCTIONS *
- ***********************/
-
+ ***********************/ 
 const names = function (todos) {
   return todos.map(getTodoName)
 }
